@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0C4A6E28B7CF2900BFD22D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A6D28B7CF2900BFD22D /* LoadingView.swift */; };
+		7C0C4A7128B7CF6200BFD22D /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7028B7CF6200BFD22D /* ViewExtension.swift */; };
+		7C0C4A7328B7CFB500BFD22D /* ErrorAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7228B7CFB500BFD22D /* ErrorAlerts.swift */; };
+		7C0C4A7528B7D01D00BFD22D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7428B7D01D00BFD22D /* ColorExtension.swift */; };
+		7C0C4A7828B7D09600BFD22D /* WorkshopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7728B7D09600BFD22D /* WorkshopButton.swift */; };
+		7C0C4A7B28B7D0EE00BFD22D /* CustomLoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7A28B7D0EE00BFD22D /* CustomLoginTextField.swift */; };
+		7C0C4A7D28B7D11800BFD22D /* CustomLoginSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7C28B7D11800BFD22D /* CustomLoginSecureField.swift */; };
+		7C0C4A7F28B7D18900BFD22D /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7E28B7D18900BFD22D /* RegistrationView.swift */; };
+		7C0C4A8128B7D19300BFD22D /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A8028B7D19300BFD22D /* ResetPasswordView.swift */; };
 		7CB901B328B6BE4E00BD2259 /* WorkshopSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB901B228B6BE4E00BD2259 /* WorkshopSwiftUIApp.swift */; };
 		7CB901B528B6BE4E00BD2259 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB901B428B6BE4E00BD2259 /* ContentView.swift */; };
 		7CB901B728B6BE5000BD2259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB901B628B6BE5000BD2259 /* Assets.xcassets */; };
@@ -21,6 +30,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C0C4A6D28B7CF2900BFD22D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		7C0C4A7028B7CF6200BFD22D /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		7C0C4A7228B7CFB500BFD22D /* ErrorAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlerts.swift; sourceTree = "<group>"; };
+		7C0C4A7428B7D01D00BFD22D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		7C0C4A7728B7D09600BFD22D /* WorkshopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopButton.swift; sourceTree = "<group>"; };
+		7C0C4A7A28B7D0EE00BFD22D /* CustomLoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginTextField.swift; sourceTree = "<group>"; };
+		7C0C4A7C28B7D11800BFD22D /* CustomLoginSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginSecureField.swift; sourceTree = "<group>"; };
+		7C0C4A7E28B7D18900BFD22D /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		7C0C4A8028B7D19300BFD22D /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		7CB901AF28B6BE4E00BD2259 /* WorkshopSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkshopSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB901B228B6BE4E00BD2259 /* WorkshopSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopSwiftUIApp.swift; sourceTree = "<group>"; };
 		7CB901B428B6BE4E00BD2259 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +64,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C0C4A6F28B7CF5800BFD22D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C0C4A7028B7CF6200BFD22D /* ViewExtension.swift */,
+				7C0C4A7428B7D01D00BFD22D /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7C0C4A7628B7D08800BFD22D /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7C0C4A7728B7D09600BFD22D /* WorkshopButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		7C0C4A7928B7D0E200BFD22D /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				7C0C4A7A28B7D0EE00BFD22D /* CustomLoginTextField.swift */,
+				7C0C4A7C28B7D11800BFD22D /* CustomLoginSecureField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		7CB901A628B6BE4E00BD2259 = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +168,9 @@
 		7CB901C328B6C85C00BD2259 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7C0C4A6F28B7CF5800BFD22D /* Extensions */,
 				7CB901DF28B6CD8200BD2259 /* Constants.swift */,
+				7C0C4A7228B7CFB500BFD22D /* ErrorAlerts.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -192,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				7CB901D828B6CBCC00BD2259 /* LoginView.swift */,
+				7C0C4A7E28B7D18900BFD22D /* RegistrationView.swift */,
+				7C0C4A8028B7D19300BFD22D /* ResetPasswordView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -199,6 +247,9 @@
 		7CB901CD28B6C89B00BD2259 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7C0C4A7928B7D0E200BFD22D /* TextField */,
+				7C0C4A7628B7D08800BFD22D /* Buttons */,
+				7C0C4A6D28B7CF2900BFD22D /* LoadingView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -313,12 +364,21 @@
 				7CB901D928B6CBCC00BD2259 /* LoginView.swift in Sources */,
 				7CB901D528B6CAF900BD2259 /* User.swift in Sources */,
 				7CB901B528B6BE4E00BD2259 /* ContentView.swift in Sources */,
+				7C0C4A8128B7D19300BFD22D /* ResetPasswordView.swift in Sources */,
+				7C0C4A6E28B7CF2900BFD22D /* LoadingView.swift in Sources */,
 				7CB901B328B6BE4E00BD2259 /* WorkshopSwiftUIApp.swift in Sources */,
+				7C0C4A7F28B7D18900BFD22D /* RegistrationView.swift in Sources */,
+				7C0C4A7328B7CFB500BFD22D /* ErrorAlerts.swift in Sources */,
+				7C0C4A7D28B7D11800BFD22D /* CustomLoginSecureField.swift in Sources */,
 				7CB901D328B6CA4900BD2259 /* AuthViewModel.swift in Sources */,
+				7C0C4A7128B7CF6200BFD22D /* ViewExtension.swift in Sources */,
+				7C0C4A7828B7D09600BFD22D /* WorkshopButton.swift in Sources */,
 				7CB901D728B6CBC300BD2259 /* MainTabView.swift in Sources */,
 				7CB901DB28B6CC8500BD2259 /* AuthDataService.swift in Sources */,
+				7C0C4A7B28B7D0EE00BFD22D /* CustomLoginTextField.swift in Sources */,
 				7CB901DE28B6CCF200BD2259 /* WorkshopAlerts.swift in Sources */,
 				7CB901E028B6CD8200BD2259 /* Constants.swift in Sources */,
+				7C0C4A7528B7D01D00BFD22D /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +520,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.gogrow.WorkshopSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.gogrow.Wo-rkshopSwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -489,7 +549,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.gogrow.WorkshopSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.gogrow.Wo-rkshopSwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

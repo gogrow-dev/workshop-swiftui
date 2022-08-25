@@ -15,9 +15,13 @@ struct UserInfo {
 }
 
 class AuthViewModel: ObservableObject {
-    @Published var userSession: User?
+    @Published var userInfo = UserInfo()
+    
+    @Published var isLoading = false
     @Published var boilerplateError: WorkshopError?
     @Published var boilerplateSuccess: WorkshopSuccess?
+    
+    @Published var userSession: User?
     
     let dataService: AuthDataService
     

@@ -5,7 +5,7 @@
 //  Created by Nicolas Cobelo on 24/08/2022.
 //
 
-import Foundation
+import SwiftUI
 
 struct K {
     
