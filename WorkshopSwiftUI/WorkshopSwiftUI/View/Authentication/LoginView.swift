@@ -20,7 +20,7 @@ struct LoginView: View {
                     GoToRegisterButton()
                 }
             }
-            .alert(item: $viewModel.boilerplateError) { alert in
+            .alert(item: $viewModel.workshopError) { alert in
                 showErrorContent(for: alert)
             }
         }

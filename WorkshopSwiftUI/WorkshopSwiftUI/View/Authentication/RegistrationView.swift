@@ -22,10 +22,10 @@ struct RegistrationView: View {
                 GoToLoginButton
             }
         }.navigationBarBackButtonHidden(true)
-        .alert(item: $viewModel.boilerplateError) { alert in
+        .alert(item: $viewModel.workshopError) { alert in
             showErrorContent(for: alert)
         }
-        .alert(item: $viewModel.boilerplateSuccess) { alert in
+        .alert(item: $viewModel.workshopSuccess) { alert in
             showSuccessContent(for: alert, onDismiss: {
                 presentationMode.wrappedValue.dismiss()
             })

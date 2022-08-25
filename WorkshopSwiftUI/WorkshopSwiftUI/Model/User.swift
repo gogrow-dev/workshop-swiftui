@@ -5,16 +5,15 @@
 //  Created by Nicolas Cobelo on 24/08/2022.
 //
 
-import Foundation
+import FirebaseFirestoreSwift
 
 struct User: Identifiable, Codable {
-    var id = UUID()
     let username: String
     let email: String
     let profileImageUrl: String
     let fullname: String
     //let uid: String
-    //@DocumentID var id: String?
+    @DocumentID var id: String?
     var bio: String?
     var stats: UserStats?
     var isFollowed: Bool? = false
