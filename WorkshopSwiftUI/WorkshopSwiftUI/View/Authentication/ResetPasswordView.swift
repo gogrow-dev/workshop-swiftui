@@ -22,7 +22,7 @@ struct ResetPasswordView: View {
                 CustomLoginTextField(text: $viewModel.userInfo.email, placeholder: Text("Email Address"))
                 Spacer()
                 WorkshopButton(text: "Send") {
-                    viewModel.forgotPassword()
+                    viewModel.resetPassword()
                 }
                 
             }.padding()

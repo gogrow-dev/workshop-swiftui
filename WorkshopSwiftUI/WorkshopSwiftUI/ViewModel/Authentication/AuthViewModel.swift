@@ -9,7 +9,8 @@ import Foundation
 import Firebase
 
 struct UserInfo {
-    var name = ""
+    var fullname = ""
+    var username = ""
     var email = ""
     var password = ""
     var repeatPassword = ""
@@ -31,6 +32,21 @@ class AuthViewModel: ObservableObject {
         self.dataService = dataService
     }
     
+    func register() {
+        isLoading = true
+        dataService.register(with: userInfo) { [weak self] result in
+            switch result {
+            case .success(let user):
+                self?.isLoading = false
+                self?.userSession = user
+                self?.fetchUser()
+            case .failure(let error):
+                self?.isLoading = false
+                self?.workshopError = error
+            }
+        }
+    }
+    
     func login() {
         isLoading = true
         dataService.login(with: userInfo) { [weak self] result in
@@ -47,15 +63,22 @@ class AuthViewModel: ObservableObject {
     }
     
     func logout() {
-        
+        userSession = nil
+        try? Auth.auth().signOut()
     }
     
-    func forgotPassword() {
-        
-    }
-    
-    func register() {
-        
+    func resetPassword() {
+        isLoading = true
+        dataService.resetPassword(for: userInfo.email) { [weak self] result in
+            switch result {
+            case .success(let success):
+                self?.isLoading = false
+                self?.workshopSuccess = success
+            case .failure(let error):
+                self?.isLoading = false
+                self?.workshopError = error
+            }
+        }
     }
     
     func fetchUser() {

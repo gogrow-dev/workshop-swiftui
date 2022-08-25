@@ -10,17 +10,11 @@ import Firebase
 
 protocol AuthDataService {
     func login(with userInfo: UserInfo, completion: @escaping (Result<FirebaseAuth.User, WorkshopError>) -> Void)
-    func logout(completion: @escaping (Result<Any, WorkshopError>) -> Void)
-    func getProfile(from token: String, completion: @escaping (Result<User, WorkshopError>) -> Void)
-    
-    func register(with userInfo: UserInfo, completion: @escaping (Result<WorkshopSuccess, WorkshopError>) -> Void)
-    func forgotPassword(for email: String, completion: @escaping (Result<WorkshopSuccess, WorkshopError>) -> Void)
+    func register(with userInfo: UserInfo, completion: @escaping (Result<FirebaseAuth.User, WorkshopError>) -> Void)
+    func resetPassword(for email: String, completion: @escaping (Result<WorkshopSuccess, WorkshopError>) -> Void)
 }
 
 class WorkshopAuthDataService: AuthDataService {
-    func logout(completion: @escaping (Result<Any, WorkshopError>) -> Void) {
-        
-    }
     
     func login(with userInfo: UserInfo, completion: @escaping (Result<FirebaseAuth.User, WorkshopError>) -> Void) {
         Auth.auth().signIn(withEmail: userInfo.email, password: userInfo.password) { result, error in
@@ -34,16 +28,41 @@ class WorkshopAuthDataService: AuthDataService {
         }
     }
     
-    func getProfile(from token: String, completion: @escaping (Result<User, WorkshopError>) -> Void) {
-        
+    func register(with userInfo: UserInfo, completion: @escaping (Result<FirebaseAuth.User, WorkshopError>) -> Void) {
+        Auth.auth().createUser(withEmail: userInfo.email, password: userInfo.password) { result, error in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(.failure(.couldntRegister))
+                return
+            }
+            
+            guard let user = result?.user else { return }
+            print("Successfully registered user...")
+            
+            let data = [
+                "email": userInfo.email,
+                "username": userInfo.username,
+                "fullname": userInfo.fullname,
+                "uid": user.uid
+            ]
+            
+            COLLECTION_USERS.document(user.uid).setData(data) { _ in
+                print("Successfully uploaded user data...")
+                completion(.success(user))
+            }
+        }
     }
     
-    func register(with userInfo: UserInfo, completion: @escaping (Result<WorkshopSuccess, WorkshopError>) -> Void) {
-        
-    }
-    
-    func forgotPassword(for email: String, completion: @escaping (Result<WorkshopSuccess, WorkshopError>) -> Void) {
-        
+    func resetPassword(for email: String, completion: @escaping (Result<WorkshopSuccess, WorkshopError>) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                print("Failed to send link with error: \(error.localizedDescription)")
+                completion(.failure(.couldntResetPassword))
+                return
+            } else {
+                completion(.success(.emailSent))
+            }
+        }
     }
     
     

@@ -35,7 +35,8 @@ struct RegistrationView: View {
     
     private var registerTextFields: some View {
         VStack(spacing: 20) {
-            CustomLoginTextField(text: $viewModel.userInfo.name, placeholder: Text("Full Name"))
+            CustomLoginTextField(text: $viewModel.userInfo.fullname, placeholder: Text("Full Name"))
+            CustomLoginTextField(text: $viewModel.userInfo.username, placeholder: Text("Username"))
             CustomLoginTextField(text: $viewModel.userInfo.email, placeholder: Text("Email Address"))
             CustomLoginSecureField(text: $viewModel.userInfo.password, placeholder: Text("Password"))
             CustomLoginSecureField(text: $viewModel.userInfo.repeatPassword, placeholder: Text("Repeat Password"))
