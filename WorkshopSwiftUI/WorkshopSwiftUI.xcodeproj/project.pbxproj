@@ -11,6 +11,13 @@
 		7CB901B528B6BE4E00BD2259 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB901B428B6BE4E00BD2259 /* ContentView.swift */; };
 		7CB901B728B6BE5000BD2259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB901B628B6BE5000BD2259 /* Assets.xcassets */; };
 		7CB901BA28B6BE5000BD2259 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB901B928B6BE5000BD2259 /* Preview Assets.xcassets */; };
+		7CB901D328B6CA4900BD2259 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB901D228B6CA4900BD2259 /* AuthViewModel.swift */; };
+		7CB901D528B6CAF900BD2259 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB901D428B6CAF900BD2259 /* User.swift */; };
+		7CB901D728B6CBC300BD2259 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB901D628B6CBC300BD2259 /* MainTabView.swift */; };
+		7CB901D928B6CBCC00BD2259 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB901D828B6CBCC00BD2259 /* LoginView.swift */; };
+		7CB901DB28B6CC8500BD2259 /* AuthDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB901DA28B6CC8500BD2259 /* AuthDataService.swift */; };
+		7CB901DE28B6CCF200BD2259 /* WorkshopAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB901DD28B6CCF200BD2259 /* WorkshopAlerts.swift */; };
+		7CB901E028B6CD8200BD2259 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB901DF28B6CD8200BD2259 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		7CB901B428B6BE4E00BD2259 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7CB901B628B6BE5000BD2259 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CB901B928B6BE5000BD2259 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7CB901D228B6CA4900BD2259 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		7CB901D428B6CAF900BD2259 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7CB901D628B6CBC300BD2259 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		7CB901D828B6CBCC00BD2259 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7CB901DA28B6CC8500BD2259 /* AuthDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataService.swift; sourceTree = "<group>"; };
+		7CB901DD28B6CCF200BD2259 /* WorkshopAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopAlerts.swift; sourceTree = "<group>"; };
+		7CB901DF28B6CD8200BD2259 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +65,12 @@
 		7CB901B128B6BE4E00BD2259 /* WorkshopSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				7CB901C028B6C84C00BD2259 /* Model */,
+				7CB901C128B6C85300BD2259 /* View */,
+				7CB901C228B6C85600BD2259 /* ViewModel */,
+				7CB901C428B6C86100BD2259 /* API */,
+				7CB901C328B6C85C00BD2259 /* Utils */,
 				7CB901B228B6BE4E00BD2259 /* WorkshopSwiftUIApp.swift */,
-				7CB901B428B6BE4E00BD2259 /* ContentView.swift */,
 				7CB901B628B6BE5000BD2259 /* Assets.xcassets */,
 				7CB901B828B6BE5000BD2259 /* Preview Content */,
 			);
@@ -65,6 +83,161 @@
 				7CB901B928B6BE5000BD2259 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7CB901C028B6C84C00BD2259 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7CB901DC28B6CCE800BD2259 /* Enums */,
+				7CB901D428B6CAF900BD2259 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7CB901C128B6C85300BD2259 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7CB901CD28B6C89B00BD2259 /* Helpers */,
+				7CB901CC28B6C89600BD2259 /* Authentication */,
+				7CB901CB28B6C89300BD2259 /* Notifications */,
+				7CB901CA28B6C89000BD2259 /* Search */,
+				7CB901C928B6C88A00BD2259 /* Comments */,
+				7CB901C828B6C88700BD2259 /* Feed */,
+				7CB901C728B6C88200BD2259 /* Profile */,
+				7CB901C628B6C87D00BD2259 /* UploadPost */,
+				7CB901C528B6C87B00BD2259 /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7CB901C228B6C85600BD2259 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7CB901D128B6C8CC00BD2259 /* Feed */,
+				7CB901D028B6C8C800BD2259 /* Notifications */,
+				7CB901CF28B6C8C400BD2259 /* Authentication */,
+				7CB901CE28B6C8BF00BD2259 /* Profile */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7CB901C328B6C85C00BD2259 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7CB901DF28B6CD8200BD2259 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7CB901C428B6C86100BD2259 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7CB901DA28B6CC8500BD2259 /* AuthDataService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		7CB901C528B6C87B00BD2259 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7CB901B428B6BE4E00BD2259 /* ContentView.swift */,
+				7CB901D628B6CBC300BD2259 /* MainTabView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7CB901C628B6C87D00BD2259 /* UploadPost */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UploadPost;
+			sourceTree = "<group>";
+		};
+		7CB901C728B6C88200BD2259 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7CB901C828B6C88700BD2259 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		7CB901C928B6C88A00BD2259 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		7CB901CA28B6C89000BD2259 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		7CB901CB28B6C89300BD2259 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		7CB901CC28B6C89600BD2259 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				7CB901D828B6CBCC00BD2259 /* LoginView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		7CB901CD28B6C89B00BD2259 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7CB901CE28B6C8BF00BD2259 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7CB901CF28B6C8C400BD2259 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				7CB901D228B6CA4900BD2259 /* AuthViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		7CB901D028B6C8C800BD2259 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		7CB901D128B6C8CC00BD2259 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		7CB901DC28B6CCE800BD2259 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				7CB901DD28B6CCF200BD2259 /* WorkshopAlerts.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +310,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB901D928B6CBCC00BD2259 /* LoginView.swift in Sources */,
+				7CB901D528B6CAF900BD2259 /* User.swift in Sources */,
 				7CB901B528B6BE4E00BD2259 /* ContentView.swift in Sources */,
 				7CB901B328B6BE4E00BD2259 /* WorkshopSwiftUIApp.swift in Sources */,
+				7CB901D328B6CA4900BD2259 /* AuthViewModel.swift in Sources */,
+				7CB901D728B6CBC300BD2259 /* MainTabView.swift in Sources */,
+				7CB901DB28B6CC8500BD2259 /* AuthDataService.swift in Sources */,
+				7CB901DE28B6CCF200BD2259 /* WorkshopAlerts.swift in Sources */,
+				7CB901E028B6CD8200BD2259 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
