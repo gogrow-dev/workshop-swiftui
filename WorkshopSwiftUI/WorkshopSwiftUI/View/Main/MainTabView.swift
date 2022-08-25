@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+    let user: User
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            UserListView()
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            ProfileView(user: user)
+                .tabItem {
+                    Label("Profile", systemImage: "person")
+                }
+        }
     }
 }
-
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView()
+        MainTabView(user: User.default)
     }
 }
