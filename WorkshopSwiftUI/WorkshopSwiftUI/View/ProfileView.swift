@@ -14,23 +14,16 @@ struct ProfileView: View {
     let user: User
     var body: some View {
         VStack {
+            Spacer()
             Text(user.fullname)
-        }
-        .confirmationDialog("Logout", isPresented: $showSettings) {
-            Button("Logout") { authViewModel.logout() }
-        }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                if user.isCurrentUser {
-                    Button(action: {
-                        showSettings.toggle()
-                    }) {
-                        Image(systemName: "ellipsis")
-                            .rotationEffect(Angle(degrees: 90))
-                    }
+            Spacer()
+            if user.isCurrentUser {
+                WorkshopButton(text: "Sign out", buttonColor: .red) {
+                    authViewModel.logout()
                 }
             }
         }
+        .padding()
     }
 }
 

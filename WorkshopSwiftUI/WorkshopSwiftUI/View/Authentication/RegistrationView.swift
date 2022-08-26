@@ -16,7 +16,9 @@ struct RegistrationView: View {
         LoadingView(viewModel.isLoading) {
             VStack {
                 registerTextFields
-                registerButton
+                WorkshopButton(text: "Register") {
+                    viewModel.register()
+                }
                 Spacer()
                 
                 GoToLoginButton
@@ -43,16 +45,10 @@ struct RegistrationView: View {
         }
         .padding(20)
     }
-    
-    private var registerButton: some View {
-        WorkshopButton(text: "Register") {
-            viewModel.register()
-        }
-    }
 }
 
 extension RegistrationView {
-    var GoToLoginButton: some View {
+    private var GoToLoginButton: some View {
         Button(action: {
             presentationMode.wrappedValue.dismiss()
         }) {

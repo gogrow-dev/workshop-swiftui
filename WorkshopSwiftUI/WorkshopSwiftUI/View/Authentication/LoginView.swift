@@ -14,9 +14,10 @@ struct LoginView: View {
             LoadingView(viewModel.isLoading) {
                 VStack {
                     loginTextFields
-                    loginButton
+                    WorkshopButton(text: "Sign in") {
+                        viewModel.login()
+                    }
                     Spacer()
-                    
                     GoToRegisterButton()
                 }
             }
@@ -34,12 +35,6 @@ struct LoginView: View {
             ForgotPasswordButton()
         }
         .padding(20)
-    }
-    
-    private var loginButton: some View {
-        WorkshopButton(text: "Sign in") {
-            viewModel.login()
-        }
     }
 }
 

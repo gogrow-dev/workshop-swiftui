@@ -18,7 +18,6 @@ struct UserListView: View {
                     } label: {
                         UserRow(user: user)
                     }.listRowBackground(Color.clear)
-
                 }
                 .listStyle(.plain)
             }

@@ -12,7 +12,6 @@ struct WorkshopButton: View {
     var text: String
     var textColor: Color = .white
     var buttonColor: Color = .blue
-    var buttonBorderColor: Color = .blue
     var width: CGFloat = 229
     var height: CGFloat = 45
     var font: Font = .body
@@ -25,7 +24,7 @@ struct WorkshopButton: View {
                 Capsule()
                     .stroke(lineWidth: 3)
                     .frame(width: width, height: height)
-                    .foregroundColor(buttonBorderColor)
+                    .foregroundColor(buttonColor)
                 Capsule()
                     .frame(width: width, height: height)
                     .foregroundColor(buttonColor)

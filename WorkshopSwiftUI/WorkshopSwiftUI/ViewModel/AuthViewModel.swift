@@ -33,6 +33,8 @@ class AuthViewModel: ObservableObject {
     
     init(dataService: AuthDataService = WorkshopAuthDataService()) {
         self.dataService = dataService
+        userSession = Auth.auth().currentUser
+        fetchUser()
     }
     
     func register() {
@@ -42,7 +44,6 @@ class AuthViewModel: ObservableObject {
             case .success(let user):
                 self?.isLoading = false
                 self?.userSession = user
-                self?.fetchUser()
             case .failure(let error):
                 self?.isLoading = false
                 self?.workshopError = error
@@ -57,7 +58,6 @@ class AuthViewModel: ObservableObject {
             case .success(let user):
                 self?.isLoading = false
                 self?.userSession = user
-                self?.fetchUser()
             case .failure(let error):
                 self?.isLoading = false
                 self?.workshopError = error
