@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct RegistrationView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @Environment(\.presentationMode) var presentationMode
@@ -22,8 +20,8 @@ struct RegistrationView: View {
                 Spacer()
                 
                 GoToLoginButton
-            }
-        }.navigationBarBackButtonHidden(true)
+            }.padding(.top)
+        }.navigationBarHidden(true)
         .alert(item: $viewModel.workshopError) { alert in
             showErrorContent(for: alert)
         }

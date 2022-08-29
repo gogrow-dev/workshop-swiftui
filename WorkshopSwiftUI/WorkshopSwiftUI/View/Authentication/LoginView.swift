@@ -19,8 +19,8 @@ struct LoginView: View {
                     }
                     Spacer()
                     GoToRegisterButton()
-                }
-            }
+                }.padding(.top)
+            }.navigationBarHidden(true)
             .alert(item: $viewModel.workshopError) { alert in
                 showErrorContent(for: alert)
             }
