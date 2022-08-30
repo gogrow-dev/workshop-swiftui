@@ -45,7 +45,6 @@ class WorkshopAuthDataService: AuthDataService {
                 let data = [
                     "email": userInfo.email,
                     "username": userInfo.username,
-                    "fullname": userInfo.fullname,
                     "uid": user.uid
                 ]
                 

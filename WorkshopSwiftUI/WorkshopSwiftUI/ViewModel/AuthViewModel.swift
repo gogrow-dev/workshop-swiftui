@@ -9,11 +9,9 @@ import Foundation
 import Firebase
 
 struct UserInfo {
-    var fullname = ""
     var username = ""
     var email = ""
     var password = ""
-    var repeatPassword = ""
 }
 
 class AuthViewModel: ObservableObject {

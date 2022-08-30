@@ -11,30 +11,18 @@ struct LoginView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         NavigationView {
-            LoadingView(viewModel.isLoading) {
-                VStack {
-                    loginTextFields
-                    WorkshopButton(text: "Sign in") {
-                        viewModel.login()
-                    }
-                    Spacer()
-                    GoToRegisterButton()
-                }.padding(.top)
-            }.navigationBarHidden(true)
+            VStack {
+                LoginTextFields()
+                WorkshopButton(text: "Sign in") {
+                    print("User is trying to sign in")
+                }
+                Spacer()
+                GoToRegisterButton()
+            }.padding(.top).navigationBarHidden(true)
             .alert(item: $viewModel.workshopError) { alert in
                 showErrorContent(for: alert)
             }
         }
-    }
-    
-    
-    private var loginTextFields: some View {
-        VStack(spacing: 20) {
-            CustomLoginTextField(text: $viewModel.userInfo.email, placeholder: Text("Email Address"))
-            CustomLoginSecureField(text: $viewModel.userInfo.password, placeholder: Text("Password"))
-            ForgotPasswordButton()
-        }
-        .padding(20)
     }
 }
 
@@ -49,7 +37,19 @@ struct LoginView_Previews: PreviewProvider {
 
 extension LoginView {
     
-    struct GoToRegisterButton: View {
+    private struct LoginTextFields: View {
+        @EnvironmentObject var viewModel: AuthViewModel
+        var body: some View {
+            VStack(spacing: 20) {
+                CustomLoginTextField(text: $viewModel.userInfo.email, placeholder: Text("Email Address"))
+                CustomLoginSecureField(text: $viewModel.userInfo.password, placeholder: Text("Password"))
+                ForgotPasswordButton()
+            }
+            .padding(20)
+        }
+    }
+    
+    private struct GoToRegisterButton: View {
         var body: some View {
             NavigationLink(
                 destination: RegistrationView()) {
@@ -63,7 +63,7 @@ extension LoginView {
         }
     }
     
-    struct ForgotPasswordButton: View {
+    private struct ForgotPasswordButton: View {
         var body: some View {
             HStack {
                 Spacer()
