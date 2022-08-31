@@ -11,14 +11,17 @@ struct LoginView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         NavigationView {
-            VStack {
-                LoginTextFields()
-                WorkshopButton(text: "Sign in") {
-                    print("User is trying to sign in")
-                }
-                Spacer()
-                GoToRegisterButton()
-            }.padding(.top).navigationBarHidden(true)
+            LoadingView(viewModel.isLoading) {
+                VStack {
+                    LoginTextFields()
+                    WorkshopButton(text: "Sign in") {
+                        viewModel.login()
+                    }
+                    Spacer()
+                    GoToRegisterButton()
+                }.padding(.top)
+            }
+            .navigationBarHidden(true)
             .alert(item: $viewModel.workshopError) { alert in
                 showErrorContent(for: alert)
             }

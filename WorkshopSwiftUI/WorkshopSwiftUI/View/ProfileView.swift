@@ -15,9 +15,9 @@ struct ProfileView: View {
     var body: some View {
         VStack {
             Spacer()
-            Text(user.fullname)
+            Text(user.username)
             Spacer()
-            if user.isCurrentUser {
+            if authViewModel.isCurrentUser() {
                 WorkshopButton(text: "Sign out", buttonColor: .red) {
                     authViewModel.logout()
                 }

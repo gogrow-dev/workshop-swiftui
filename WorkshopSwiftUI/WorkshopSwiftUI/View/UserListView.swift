@@ -31,7 +31,7 @@ struct UserRow: View {
     let user: User
     var body: some View {
         VStack(alignment: .leading) {
-            Text(user.fullname)
+            Text(user.username)
                 .font(.body)
             Text(user.email)
                 .font(.caption)

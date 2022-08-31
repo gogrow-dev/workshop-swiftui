@@ -10,7 +10,6 @@
 		7C0C4A6E28B7CF2900BFD22D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A6D28B7CF2900BFD22D /* LoadingView.swift */; };
 		7C0C4A7128B7CF6200BFD22D /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7028B7CF6200BFD22D /* ViewExtension.swift */; };
 		7C0C4A7328B7CFB500BFD22D /* ErrorAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7228B7CFB500BFD22D /* ErrorAlerts.swift */; };
-		7C0C4A7528B7D01D00BFD22D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7428B7D01D00BFD22D /* ColorExtension.swift */; };
 		7C0C4A7828B7D09600BFD22D /* WorkshopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7728B7D09600BFD22D /* WorkshopButton.swift */; };
 		7C0C4A7B28B7D0EE00BFD22D /* CustomLoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7A28B7D0EE00BFD22D /* CustomLoginTextField.swift */; };
 		7C0C4A7D28B7D11800BFD22D /* CustomLoginSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0C4A7C28B7D11800BFD22D /* CustomLoginSecureField.swift */; };
@@ -42,7 +41,6 @@
 		7C0C4A6D28B7CF2900BFD22D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7C0C4A7028B7CF6200BFD22D /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		7C0C4A7228B7CFB500BFD22D /* ErrorAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlerts.swift; sourceTree = "<group>"; };
-		7C0C4A7428B7D01D00BFD22D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		7C0C4A7728B7D09600BFD22D /* WorkshopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopButton.swift; sourceTree = "<group>"; };
 		7C0C4A7A28B7D0EE00BFD22D /* CustomLoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginTextField.swift; sourceTree = "<group>"; };
 		7C0C4A7C28B7D11800BFD22D /* CustomLoginSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginSecureField.swift; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				7C0C4A7028B7CF6200BFD22D /* ViewExtension.swift */,
-				7C0C4A7428B7D01D00BFD22D /* ColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -335,7 +332,6 @@
 				7CB901DE28B6CCF200BD2259 /* WorkshopAlerts.swift in Sources */,
 				7C0C4A9728B7F7FF00BFD22D /* ProfileView.swift in Sources */,
 				7CB901E028B6CD8200BD2259 /* Constants.swift in Sources */,
-				7C0C4A7528B7D01D00BFD22D /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,8 +16,6 @@ struct UserInfo {
 
 class AuthViewModel: ObservableObject {
     
-    static let shared = AuthViewModel()
-    
     @Published var userInfo = UserInfo()
     @Published var currentUser: User?
     
@@ -42,6 +40,7 @@ class AuthViewModel: ObservableObject {
             case .success(let user):
                 self?.isLoading = false
                 self?.userSession = user
+                self?.fetchUser()
             case .failure(let error):
                 self?.isLoading = false
                 self?.workshopError = error
@@ -56,6 +55,7 @@ class AuthViewModel: ObservableObject {
             case .success(let user):
                 self?.isLoading = false
                 self?.userSession = user
+                self?.fetchUser()
             case .failure(let error):
                 self?.isLoading = false
                 self?.workshopError = error
@@ -88,5 +88,10 @@ class AuthViewModel: ObservableObject {
             guard let user = try? snapshot?.data(as: User.self) else { return }
             self.currentUser = user
         }
+    }
+    
+    func isCurrentUser() -> Bool {
+        guard let uid = userSession?.uid else { return false }
+        return uid == currentUser?.id
     }
 }
