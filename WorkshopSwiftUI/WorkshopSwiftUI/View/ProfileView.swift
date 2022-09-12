@@ -10,7 +10,6 @@ import Firebase
 
 struct ProfileView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
-    @State private var showSettings = false
     let user: User
     var body: some View {
         VStack {
